@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
     text-align: center;
     width: 550px;
   }
+
 `;
 
 export default GlobalStyles;

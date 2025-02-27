@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header/Header";
+import Footer from "./Footer/Footer"
 import { Outlet } from "react-router-dom";
 
 const Layout = () => {
@@ -9,9 +10,9 @@ const Layout = () => {
       <main>
         <Outlet /> {/* Aquí se renderizarán las rutas hijas */}
       </main>
-      <footer>
+      <Footer>
         {/* Contenido del pie de página */}
-      </footer>
+      </Footer>
     </div>
   );
 };

@@ -1,8 +1,7 @@
 import React from "react";
 import banner from "../../asset/image/banner.jpg";
-import "../../styles/design-stats-styles.css"
-import imagenSvg from "../../asset/svg/design-stats-not-css.svg";
-import { BannerContrainer, Title, MainContrainer, DivFlex, DivItem, DivCircle, CardFace, Card, CardBack, CardContainer, CardWrapper, CardTitle, CardText} from "./Home.styles";
+import imagenSvg from "../../asset/svg/design-stats-animate.svg";
+import { BannerContrainer, Title, MainContrainer, DivFlex, DivItem, DivCircle, CardFace, Card, CardBack, CardContainer, CardWrapper, CardTitle, CardText, Span, GraphicContainer, Div} from "./Home.styles";
 
 function Home() {
   return (
@@ -16,10 +15,10 @@ function Home() {
           </Title>
         </div>
       </BannerContrainer>
-      <DivFlex >
+      <DivFlex>
         <DivCircle>
           <h3>Transforma tu rutina, alcanza tus metas</h3>
-          <p>En nuestro día a día los hábitos que construimos determinan nuestro progreso y bienestar <span>Flowbit</span> es una plataforma diseña para ayudar a establecer, seguir y mejorar tus h[abitos de manera sencilla y efetiva. Ya sea que quieras desarrollar una rutina de ejercicio, mejorar tu alimentació, leer más libros o simplemente ser más productivo, <span>Flowbit</span> te brinda las herramientas necesarias para mentener la constancia y visualizar tu progreso.
+          <p>En nuestro día a día los hábitos que construimos determinan nuestro progreso y bienestar <Span>Flowbit</Span> es una plataforma diseña para ayudar a establecer, seguir y mejorar tus h[abitos de manera sencilla y efetiva. Ya sea que quieras desarrollar una rutina de ejercicio, mejorar tu alimentació, leer más libros o simplemente ser más productivo, <Span>Flowbit</Span> te brinda las herramientas necesarias para mentener la constancia y visualizar tu progreso.
             Nuestro programa ofrece una interfaz intuitiva, gráficos motivadores y recordatorios personalizados convirtiendo pequeños pasos en grandes cambios nunca ha sido tan fácil tomar el control de tu rutina y haz que cada dia cuente.</p>
         </DivCircle>
         {/* 📌 usamos el $ para que React ignore el argumento */}
@@ -119,39 +118,42 @@ function Home() {
         </CardWrapper>
       </DivFlex>
 
-      <div>
-        <h3>📊 Mide tu progreso, alcanza tus metas</h3>
-        <p>El cambio real no sucede de la noche a la mañana pero cuando puedes ver tu evolución, todo se vuelve más fácil y motivador. En <span>Flowbit</span> las estadísticas y reportes te ayudan a transformar pequeñas acciones en grandes logros.</p>
-        <DivFlex>
-          <div>
-            <h4>🌟 ¿Por qué es importante medir tu progreso?</h4>
+      <DivFlex $flexColumn $space>
+        <GraphicContainer>
+          <h3>📊 Mide tu progreso, alcanza tus metas</h3>
+          <p>El cambio real no sucede de la noche a la mañana pero cuando puedes ver tu evolución, todo se vuelve más fácil y motivador. En <Span>Flowbit</Span> las estadísticas y reportes te ayudan a transformar pequeñas acciones en grandes logros.</p>
+        </GraphicContainer>
+        
+        <DivFlex $spaceBetween>
+          <Div>
+            <h3>🌟 ¿Por qué es importante medir tu progreso?</h3>
             <ul>
               <li>
-                <p><span>✅ Visualiza tu avance</span> → Con gráficas y reportes detallado sabrás qué habitos estás cumpliendo y dónde mejorar.</p>
+                <p><Span>✅ Visualiza tu avance</Span> → Con gráficas y reportes detallado sabrás qué habitos estás cumpliendo y dónde mejorar.</p>
               </li>
               <li>
-                <p><span>✅ Descubre patrones y tendencias</span> → Identifica los momentos que eres más constante y ajusta tu rutina para optimizar tu rendimiento.</p>
+                <p><Span>✅ Descubre patrones y tendencias</Span> → Identifica los momentos que eres más constante y ajusta tu rutina para optimizar tu rendimiento.</p>
               </li>
               <li>
-                <p><span>✅ Mantén la motivaición</span> → Ver tu progreso en tiempo real, impulsa la disciplina y refuerza el compromiso con tus objetivos.</p>
+                <p><Span>✅ Mantén la motivaición</Span> → Ver tu progreso en tiempo real, impulsa la disciplina y refuerza el compromiso con tus objetivos.</p>
               </li>
               <li>
                 <p>
-                  <span>✅ Toma mejores decisiones</span> → Con datos claros podrás adaptar tu plan de hábitoa para hacerlo más efectivo.
+                  <Span>✅ Toma mejores decisiones</Span> → Con datos claros podrás adaptar tu plan de hábitoa para hacerlo más efectivo.
                 </p>
               </li>
               <li>
-                <p><span>✅ Evalúa tu crecimiento</span> → Observa cómo has evolucionando con el tiempo y celebra cada avance por pequeño que sea.</p>
+                <p><Span>✅ Evalúa tu crecimiento</Span> → Observa cómo has evolucionando con el tiempo y celebra cada avance por pequeño que sea.</p>
               </li>
             </ul>
-          </div>
+          </Div>
           <div>
-            <img className="animated" src={imagenSvg} alt="Ilustración animada"/>
+            <img className="ilustration" src={imagenSvg} alt="Ilustración animada" width={500}/>
           </div>
         </DivFlex>
-        <p>💠 Convierte tu rutina en un camino de éxito con <span>Flowbit</span>, cada paso cuenta y cada hábito registrado te acerca más a tus metas.</p>
-        <p><span>🚀 Empieza hoy y toma el control de tu progreso.</span></p>
-      </div>
+        <p>💠 Convierte tu rutina en un camino de éxito con <Span>Flowbit</Span>, cada paso cuenta y cada hábito registrado te acerca más a tus metas.</p>
+        <p><Span>🚀 Empieza hoy y toma el control de tu progreso.</Span></p>
+      </DivFlex>
     </MainContrainer>
   );
 }

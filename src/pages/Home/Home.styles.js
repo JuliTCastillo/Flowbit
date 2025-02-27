@@ -33,6 +33,7 @@ export const  MainContrainer = styled.main`
 export const DivFlex = styled.div`
     display: flex;
     justify-content: space-around;
+    width: ${(props) => (props.$spaceBetween ? "100%" : "")} ;
     align-items: center;
     flex-direction: ${(props) => (props.$flexColumn ? "column" : "row")};
     height: 100%;
@@ -181,3 +182,22 @@ export const CardText = styled.p`
     max-height: 50%; /* Hace que el texto aparezca */
   }
 `;
+
+export const Span = styled.span`
+  font-weight: bold;
+  font-family: "DynaPuff", cursive;
+`
+export const GraphicContainer = styled.div`
+    width:90%;
+    p{font-family: "Coming Soon", cursive;}
+    h3{text-align: left;}
+`
+export const Div = styled.div.withConfig({
+    shouldForwardProp: (prop) => !["spaceTitle", "divCenter"].includes(prop),
+})`
+    width: ${(props) => (props.spaceTitle ? "80%" : "550px")};
+    p{font-family: "Coming Soon", cursive;}
+    li{
+        margin:20px 10px;
+    }
+`
