@@ -1,15 +1,18 @@
+import React from "react";
+import Header from "./Header/Header";
 import { Outlet } from "react-router-dom";
-import Header from "./header";
 
 const Layout = () => {
   return (
-    <>
-      <Header />
+    <div>
+      <Header/>
       <main>
-        <Outlet /> {/* Aquí se renderizan las páginas (Home, Login, etc.) */}
+        <Outlet /> {/* Aquí se renderizarán las rutas hijas */}
       </main>
-      {/* <Footer /> */}
-    </>
+      <footer>
+        {/* Contenido del pie de página */}
+      </footer>
+    </div>
   );
 };
 
